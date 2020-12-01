@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    font-size: 60px;
+}
+h3{
+    text-align: center;
+}
+button{
+    margin: auto;
+    display: inline-block;
+}
+.container{
+    margin: auto;
+    width: 600px;
+    cursor: url(img/palu1.png),auto;
+}
+.container:active{
+    cursor: url(img/palu2.png),auto;
+}
+.tanah{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+
+}
+.tanah::after{
+    content: '';
+    background: url(img/tanah.png) bottom center no-repeat;
+    background-size: 80%;
+    width: 200px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+}
+.tikus{
+    width: 100%;
+    height: 100%;
+    background: url(img/tikus.png) no-repeat center;
+    background-size: 60%;
+    top: 200px;
+    position: absolute;
+    transition: all 0.3s;
+    position: absolute;
+}
+.tanah.out .tikus{
+    top: 20px;
+
+}
+.tikus:after{
+    content: '';
+    background: url(img/pow.png) no-repeat center;
+    display: block;
+    width: 100px;
+    position: absolute;
+}
+.time{
+    width: 10%;
+    margin: auto;
+}
+input{
+    width: 10%;
+    margin: auto;
+}
